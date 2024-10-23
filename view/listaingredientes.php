@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doceria Dark Moon</title>
+  <title>Alteração - Doceria Dark Moon</title>
   
   <script type="text/javascript">
   function deletar(idingredientes) {

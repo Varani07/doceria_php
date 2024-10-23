@@ -32,10 +32,10 @@
           <li><a href="#">Sair</a></li>
         </ul>
       </div>      <div class="conteudo">
-        <form action="#" method="post">
+          <form action="../controller/ingredienteBO.php" method="post">
           <label>Nome:</label>
           <input type="text" name="txtnome"><br><br>
-          <input type="hidden" name="acao" value="inserir"/>
+          <input type="hidden" name="acao" value="alterar"/>
           <input type="submit" name="btnCadastrar" value="Cadastrar"/>
           <input type="reset" name="btnLimpar" value="Limpar"/>
         </form>
