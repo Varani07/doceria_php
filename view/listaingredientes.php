@@ -64,8 +64,8 @@
             <tr>
               <td><?php echo $value->idingredientes; ?></td>
               <td><?php echo $value->descricao; ?></td>
-              <td><button name="btnupdingrediente" onclick="location.href='upingrediente.php?idingredientes=<?php echo $value->idingrediente; ?>'">Alterar</button></td>
-              <td><button name="btnexcluir" onclick="javascript:deletar(<?php echo $value->idingrediente; ?>)">Deletar</button></td>
+              <td><button name="btnupdingrediente" onclick="location.href='updingredientes.php?idingredientes=<?php echo $value->idingredientes; ?>'">Alterar</button></td>
+              <td><button name="btnexcluir" onclick="javascript:deletar(<?php echo $value->idingredientes; ?>)">Deletar</button></td>
             </tr>
             <?php
                 }
