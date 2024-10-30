@@ -14,20 +14,24 @@ border: 0px solid #964B00;
 }
 
 .topo {
-height: 380px;
+height: auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: #fff; 
 color: #964B00; 
-padding: 20px;
+padding: 1px;
 border-bottom: 1px solid #964B00;
 }
 
+.conteudo h2{
+    color: #964B00;
+}
+
 .logo {
-width: 600px;
-height: 400px;
-margin: 10px;
+width: 450px;
+height: 200px;
+margin: 0px;
 border: 0px solid #964B00; /* Marrom */
 position: relative;
 }
@@ -98,12 +102,13 @@ width: 200px;
 background-color: #fff;
 border: 1px solid #964B00;
 padding: 20px;
+height: 280px;
 }
 
 .menu-lateral ul {
 list-style: none;
 margin: 0;
-padding:0;
+padding:0px;
 }
 
 .menu-lateral li {
@@ -127,7 +132,7 @@ border-radius: 5px;
 .conteudo {
 padding: 20px;
 margin-left: 20px; /* Espaço entre menu e conteúdo */
-height: 400px;
+height: auto;
 }
 
 .rodape {
@@ -144,6 +149,7 @@ table {
 width: 100%;
 border-collapse: collapse;
 border: 1px solid #964B00; /* Marrom */
+margin: 0 auto;
 }
 
 th, td {
@@ -190,11 +196,13 @@ background-color: #F9F9F9; /* Fundo claro */
 .conteudo input[type="submit"] {
   background-color: #964B00; /* Marrom */
   color: #fff;
+  width: 100px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s;
+  height: 40px;
 }
 
 .conteudo input[type="submit"]:hover {
@@ -215,6 +223,7 @@ background-color: #F9F9F9; /* Fundo claro */
   transition: 0.2s;
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 100px;
 }
 
 .conteudo input[type="reset"]:hover {
@@ -235,4 +244,131 @@ background-color: #F9F9F9; /* Fundo claro */
 
 .conteudo button[name="btncadingrediente"]:hover {
   background-color: #F5DEDE; /* Marrom claro */
+}
+
+.conteudo button[name="btncadastrar"] {
+  background-color: #964B00; /* Marrom */
+  color: #fff;
+  width: 100px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  height: 40px;
+}
+
+.conteudo button[name="btncadastrar"]:hover {
+  background-color: #786C3B; /* Marrom médio */
+}
+
+
+.conteudo button[name="btnalterar"] {
+  background-color: #fff;
+  color: #964B00; /* Marrom */
+  padding: 5px 10px;
+  border: 1px solid #964B00; /* Marrom */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.conteudo button[name="btnalterar"]:hover {
+  background-color: #F5DEDE; /* Marrom claro */
+}
+
+.conteudo button[name="btnexcluir"] {
+  background-color: #fff;
+  color: #964B00; /* Marrom */
+  padding: 5px 10px;
+  border: 1px solid #964B00; /* Marrom */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.conteudo button[name="btnexcluir"]:hover {
+  background-color: #F5DEDE; /* Marrom claro */
+}
+
+button[name="btnalterar"] {
+  margin: 0 auto;
+  display: block;
+}
+
+button[name="btnexcluir"] {
+  margin: 0 auto;
+  display: block;
+}
+
+.conteudo input[type="image"] {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.conteudo select {
+    padding: 10px;
+    border: 1px solid #964B00;
+    border-radius: 5px;
+    width: 320px;
+    height: 40px;
+    font-size: 18px;
+    color: #964B00;
+}
+
+.conteudo input[type="date"] {
+  padding: 10px;
+  border: 1px solid #964B00; /* Marrom */
+  border-radius: 5px;
+  width: 300px;
+  font-size: 18px;
+  color: #964B00; /* Marrom */
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.conteudo input[type="date"]:focus {
+  border-color: #786C3B; /* Marrom médio */
+  box-shadow: 0 0 10px #786C3B; /* Marrom médio */
+}
+
+.conteudo input[type="date"]:valid {
+  border-color: #964B00; /* Marrom */
+}
+
+.conteudo input[type="number"] {
+    padding: 10px;
+    border: 1px solid #964B00;
+    border-radius: 5px;
+    width: 300px;
+    /*height: 40px;*/
+    font-size: 18px;
+    color: #964B00;
+    text-align: right;
+}
+
+.conteudo input[type="number"]:focus {
+    outline: none;
+}
+
+.conteudo input[type="number"]::placeholder {
+    color: #ccc;
+    font-size: 18px;
+}
+
+.conteudo table[id="tabela-itens"]{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.conteudo input[type="password"] {
+    padding: 10px;
+    border: 1px solid #964B00;
+    border-radius: 5px;
+    width: 300px;
 }

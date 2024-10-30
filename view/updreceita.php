@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./favicon.png" type="image/png">
-  <title>Alteração - Doceria Dark Moon</title>
+  <title>Cadastro - Doceria Dark Moon</title>
     <?php
         include_once '../model/Login.php';
         Login::verificaSessao();
@@ -34,25 +34,25 @@
           include_once './menu.php';
         ?>
       </div>      
-        <div class="conteudo">
-          <h2>Alteração de ingredientes</h2>
-          <form action="../controller/ingredienteBO.php" method="post">
-          <?php
-            include_once '../model/database/IngredienteDAO.php';
-            $dao = new IngredienteDAO();
-            $id = $_GET['idingredientes'];
+      <div class="conteudo">
+          <h2>Alteração de receitas</h2>
+          <form action="../controller/receitaBO.php" method="post">
+            <?php
+            include_once '../model/database/ReceitaDAO.php';
+            $dao = new ReceitaDAO();
+            $id = $_GET['idreceita'];
             $lista = $dao->list($id);
             foreach ($lista as $value) {
           ?>
           <label>Nome:</label>
-          <input type="text" name="txtnome" value="<?php echo $value->descricao;?>"><br><br>
+          <input type="text" name="txtnome" value="<?php echo $value->nome;?>"><br><br>
           <input type="hidden" name="acao" value="alterar"/>
-          <input type="hidden" name="idingredientes" value="<?php echo $value->idingredientes;?>"/>
-          <input type="submit" name="btnAlterar" value="Alterar"/>
+          <input type="hidden" name="idreceita" value="<?php echo $value->idreceita;?>"/>
+          <input type="submit" name="btnCadastrar" value="Alterar"/>
           <input type="reset" name="btnLimpar" value="Limpar"/>
-        <?php 
+          <?php 
             }
-        ?>
+            ?>
         </form>
       </div>
     </div>

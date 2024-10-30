@@ -4,15 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alteração - Doceria Dark Moon</title>
-  
+  <link rel="icon" href="./favicon.png" type="image/png">
+  <title>Doceria Dark Moon</title>
+    <?php
+        include_once '../model/Login.php';
+        Login::verificaSessao();
+    ?>
   <script type="text/javascript">
-  function deletar(idingredientes) {
-      if(confirm('Deseja excluir o registro?')){
-          document.location.href='../controller/ingredienteBO.php?acao=deletar&idingredientes='+idingredientes;
+      function deletar(idingredientes){
+          if(confirm('deseja excluir o registro?')){
+              document.location.href='../controller/ingredienteBO.php?acao=deletar&idingredientes='+idingredientes;
+          }
       }
-    }
   </script>
+  
   <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
@@ -27,17 +32,16 @@
       </div>
     </div>
     <div class="menu-horizontal">
-      <ul>
-          <li><a href="principal.php">Início</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
+        <?php
+            include_once 'menusuperior.php';
+        ?>
     </div>
     <div class="container">
       <div class="menu-lateral">
         <ul>
-          <li><a href="listaingredientes.php">Ingredientes</a></li>
-          <li><a href="#">Receitas</a></li>
-          <li><a href="#">Sair</a></li>
+            <?php
+                include_once './menu.php';
+            ?>         
         </ul>
       </div>
       <div class="conteudo">
@@ -57,15 +61,17 @@
                 include_once '../model/database/IngredienteDAO.php';
                 $dao = new IngredienteDAO();
                 $lista = $dao->list();
-                foreach ($lista as $value){
-                    
-                
+                foreach ($lista as $value) {
             ?>
             <tr>
-              <td><?php echo $value->idingredientes; ?></td>
-              <td><?php echo $value->descricao; ?></td>
-              <td><button name="btnupdingrediente" onclick="location.href='updingredientes.php?idingredientes=<?php echo $value->idingredientes; ?>'">Alterar</button></td>
-              <td><button name="btnexcluir" onclick="javascript:deletar(<?php echo $value->idingredientes; ?>)">Deletar</button></td>
+              <td><?php echo $value->idingredientes;?></td>
+              <td><?php echo $value->descricao;?></td>
+              <td>
+                  <button name="btnalterar" onclick="location.href='updingredientes.php?idingredientes=<?php echo $value->idingredientes;?>'">Alterar</button>
+              </td>
+              <td>
+                  <button name="btnexcluir" onclick="javascript:deletar(<?php echo $value->idingredientes;?>)">Excluir</button>
+              </td>
             </tr>
             <?php
                 }
